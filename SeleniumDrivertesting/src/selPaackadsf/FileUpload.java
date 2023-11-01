@@ -21,9 +21,10 @@ public class FileUpload {
 	@Test
 	public void uploadfile()
 	{
-		WebElement uploadFie=driver.findElement(By.xpath("//*[@id=\"ng-app\"]/body/div/div[2]/div[1]/input[1]"));
-		uploadFie.sendKeys("C:\\Users\\truba\\Desktop\\UpdateCode.txt");
+		WebElement uploadFile=driver.findElement(By.xpath("//*[@id=\"ng-app\"]/body/div/div[2]/div[1]/input[1]"));
+		uploadFile.sendKeys("C:\\Users\\truba\\Desktop\\UpdateCode.txt");
 		
+		driver.findElement(By.xpath("//*[@id=\"ng-app\"]/body/div/div[2]/div[2]/table/tbody/tr/td[5]/button[1]")).click();
 		
 	}
 
