@@ -4,17 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class FileUpload {
 
-	public WebDriver driver;
+	public FirefoxDriver driver;
 	@BeforeTest
 	public void fielUpload()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
-        	 driver = new ChromeDriver();
+		System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe"); 
+		 driver = new FirefoxDriver();
         	 driver.get("http://nervgh.github.io/pages/angular-file-upload/examples/simple/");
 	}
 	

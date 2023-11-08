@@ -5,6 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,8 +24,8 @@ public static WebDriver browserObject;
 	public  void screeshotTest() throws IOException {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.chromedriver", "C://Program Files//chromedriver.exe");
-		 browserObject = new ChromeDriver ();
+		System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe"); 
+		FirefoxDriver browserObject = new FirefoxDriver();
 		browserObject.get("http://demo.itlearn360.com/");
 		browserObject.manage().window().maximize();
 		browserObject.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;

@@ -5,11 +5,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AutoUpload {
 public static void main(String[] args) throws IOException, InterruptedException {
-	
-	ChromeDriver driver = new ChromeDriver();
+	System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe"); 
+	FirefoxDriver driver = new FirefoxDriver();
 	driver.manage().window().maximize();
 	   // for page load
 	driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");       
